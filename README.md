@@ -17,6 +17,16 @@ $ npm start
 
 # generate static project
 $ npm run generate
+
+# build for docker and launch server
+$ docker build -t vue-demo .
+$ docker run -it -p 3000 vue-demo
+
+# build for docker and launch server as development mode
+$ docker build -t vue-demo . --build-arg APP_ENV=develop
+
+# To run docker-compose
+$ docker-compose up --build -d
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).

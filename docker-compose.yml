@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  rp-wl-demo:
+    environment:
+      - APP_ENV=production
+      - BASE_URL=https://your-domain.com
+    build:
+      context: .
+    container_name: vue-demo
+    ports:
+      - 3000:3000
+    restart: always
